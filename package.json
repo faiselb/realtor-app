@@ -1,0 +1,33 @@
+{
+  "name": "realtor-app",
+  "version": "1.0.0",
+  "description": "An app for realtors",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faiselb/realtor-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faiselb/realtor-app/issues"
+  },
+  "homepage": "https://github.com/faiselb/realtor-app#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "moment": "^2.22.2",
+    "mongoose": "^5.1.6",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0"
+  }
+}
