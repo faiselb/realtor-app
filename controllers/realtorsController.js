@@ -12,6 +12,16 @@ router.get('/', (request, response) => {
         .catch((err) => console.log(err))
 })
 
+router.post('/', (request, response) => {
+    const newRealtorInfo = request.body
+    newRealtor = Realtor.create(newRealtorInfo)
+        .then(() => {
+            response.json(newRealtor)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
 
 
 
