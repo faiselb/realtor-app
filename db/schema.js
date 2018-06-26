@@ -16,6 +16,20 @@ const ListingSchema = new Schema(
     }
 )
 
+const CommunitySchema = new Schema(
+    {
+        communityName: String,
+        zipCode: String,
+        listings: [ListingSchema]
+    },
+
+    {
+        timestamps: {},
+        usePushEach: true
+    }
+)
+
 module.exports = {
+    CommunitySchema,
     ListingSchema
 }
