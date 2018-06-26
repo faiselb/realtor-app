@@ -29,7 +29,25 @@ const CommunitySchema = new Schema(
     }
 )
 
+const RealtorSchema = new Schema(
+    {
+        name: String,
+        address: String,
+        city: String,
+        state: String,
+        photo_url: String,
+        description: String,
+        communities: [CommunitySchema]
+    },
+
+    {
+        timestamps: {},
+        usePushEach: true
+    }
+)
+
 module.exports = {
+    RealtorSchema,
     CommunitySchema,
     ListingSchema
 }
