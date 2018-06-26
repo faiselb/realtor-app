@@ -33,6 +33,18 @@ router.delete('/:realtorId', async (request, response) => {
     }
 })
 
+router.patch('/:realtorId', async (request, response) => {
+    try {
+        
+        const updatedRealtorInfo = await Realtor.findByIdAndUpdate(request.params.realtorId, request.body, {new: true})
+        response.json(updatedRealtorInfo)
+    }
+    catch (err) {
+        console.log(err)
+        response.sendStatus(500) 
+
+    }
+})
 
 
 module.exports = router
