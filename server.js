@@ -28,6 +28,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'hbs')
+app.use(express.static(__dirname + '/client/build/'))
+app.get('/', (req,res) => {
+  res.sendFile(__dirname + '/client/build/index.html')
+})
+
 app.use(function(err, req, res, next) {
   
   res.locals.message = err.message
