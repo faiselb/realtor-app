@@ -10,6 +10,9 @@ const mongoose = require('mongoose')
 
 const app = express()
 
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.MONGODB_URI)
+
 app.use(function(err, req, res, next) {
   
   res.locals.message = err.message
