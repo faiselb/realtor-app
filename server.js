@@ -22,6 +22,12 @@ connection.on('error', (err) => {
   console.log('Mongoose default connection error: ' + err)
 }) 
 
+app.use(logger('dev'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cookieParser())
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.use(function(err, req, res, next) {
   
   res.locals.message = err.message
