@@ -23,6 +23,16 @@ router.post('/', (request, response) => {
         })
 })
 
+router.delete('/:realtorId', async (request, response) => {
+    try {
+        await Realtor.findByIdAndRemove(request.params.realtorId)
+        response.send('completed delete')
+    }
+    catch (err) {
+        console.log(err)
+    }
+})
+
 
 
 module.exports = router
