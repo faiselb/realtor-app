@@ -46,6 +46,8 @@ const RealtorSchema = new Schema(
     }
 )
 
+
+
 module.exports = {
     RealtorSchema,
     CommunitySchema,
