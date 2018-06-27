@@ -18,5 +18,21 @@ router.get('/', async (request, response) => {
     }
 })
 
+router.post('/', async (request, response) => {
+    try {
+        const realtorId = request.params.realtorId
+        const communityId = request.params.communityId
+        const newListing = await Listing.create(request.body)
+        const realtor = await Realtor.findById(realtorId)
+        const community = await realtor.communities.id(communityId)
+        community.listings.push(newListing)
+        await realtor.save()
+        response.json(community)
+    }
+    catch (err) {
+        console.log(err)
+    }
+})
+
 
 module.exports = router
