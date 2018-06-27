@@ -55,4 +55,9 @@ app.use(function(err, req, res, next) {
   res.render('error')
 })
 
+
+const CommunitiesController = require('./controllers/communitiesController')
+app.use('/api/realtors/:realtorId/communities', CommunitiesController)
+
+
 module.exports = app

@@ -28,8 +28,6 @@ router.post('/', async (request, response) => {
     }
 })
 
-
-
 router.delete('/:communityId', async (request, response) => {
     console.log("Deleting community:", request.params.communityId)
     try {
