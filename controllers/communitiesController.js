@@ -30,4 +30,21 @@ router.post('/', async (request, response) => {
 
 
 
+router.delete('/:communityId', async (request, response) => {
+    console.log("Deleting community:", request.params.communityId)
+    try {
+        const realtor = await Realtor.findById(request.params.realtorId)
+        console.log("Got realtor:", realtor)
+        const community = realtor.communities.id(request.params.communityId).remove()
+        await realtor.save()
+        console.log("Saved realtor after removing community")
+        response.json(community)
+    }
+    catch (err) {
+        console.log(err)
+    }
+})
+
+
+
 module.exports = router
