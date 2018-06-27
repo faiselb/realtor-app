@@ -1,5 +1,5 @@
-
 require('dotenv').config()
+
 const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
@@ -22,6 +22,14 @@ connection.on('error', (err) => {
   console.log('Mongoose default connection error: ' + err)
 }) 
 
+
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'hbs')
+app.use(express.static(__dirname + '/client/build/'))
+app.get('/', (req,res) => {
+  res.sendFile(__dirname + '/client/build/index.html')
+})
+
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -32,12 +40,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 const RealtorsController = require('./controllers/realtorsController')
 app.use('/api/realtors', RealtorsController)
 
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'hbs')
-app.use(express.static(__dirname + '/client/build/'))
-app.get('/', (req,res) => {
-  res.sendFile(__dirname + '/client/build/index.html')
-})
+const CommunitiesController = require('./controllers/communitiesController')
+app.use('/api/realtors/:realtorId/communities', CommunitiesController)
+
+const ListingsController = require('./controllers/listingsController')
+app.use('/api/realtors/:realtorId/communities/:communityId/listings', ListingsController)
 
 app.use(function(req, res, next) {
   const err = new Error('Not Found')
@@ -54,10 +61,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500)
   res.render('error')
 })
-
-
-const CommunitiesController = require('./controllers/communitiesController')
-app.use('/api/realtors/:realtorId/communities', CommunitiesController)
-
 
 module.exports = app
