@@ -8,7 +8,7 @@ const ListingSchema = new Schema(
         bedrooms: String,
         bathrooms: String,
         listingPrice: String,
-        yearbuilt:String,
+        yearbuilt: String,
         listingdescription: String,
     },
     {
