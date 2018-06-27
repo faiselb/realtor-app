@@ -5,5 +5,4 @@ const Listing = require('../db/models/Listing')
 const router = express.Router({ mergeParams: true })
 
 
-
 module.exports = router
