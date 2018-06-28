@@ -17,7 +17,8 @@ class App extends Component {
     text-align: center;
     vertical-align:center;
 
-    `return (
+    `
+    return (
 
       <Router>
         <div className="App">

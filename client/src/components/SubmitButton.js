@@ -14,7 +14,6 @@ class SubmitButton extends Component {
             padding: 5px;
             margin: 8px;
         `
-
         return (
             <div>
                 <Button>Submit</Button>
