@@ -131,3 +131,45 @@ class RealtorsPage extends Component {
 }
 
 export default RealtorsPage
+
+const TrashSpan = styled.span`
+   
+    font-size: 20px;
+    color: #000000;
+    
+    &:hover {
+        color: #571B0D;
+    }
+    `
+const RealtorSpan = styled.span`
+    color: #05B8CC;
+    &:hover {
+        color: #571B0D;
+    }
+    `
+
+const RealtorContainer = styled.div`
+    padding: 15px 10px 0px 10px;
+    font-size: 20px;
+`
+const CityState = styled.div`
+    color: #343a40;
+    font-size: 12px;
+`
+const ToggleFormButton = styled.div`
+    border-radius: 8px;
+    background-color: #05B8CC;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 8px;
+    width: 150px;
+    text-align: center;
+`
+
+const RealtorList = styled.div`
+    padding-bottom: 100px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+`
