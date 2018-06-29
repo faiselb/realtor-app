@@ -21,7 +21,6 @@ class Landing extends Component {
                                 <Link to="/realtors" className="btn btn-lg btn-info mr-2">
                                     Sign Up
                                  </Link>
-
                             </div>
                         </div>
                     </div>

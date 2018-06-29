@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import { injectGlobal } from 'styled-components';
 
+import ListingsPage from './components/ListingsPage'
 import CommunitiesList from './components/CommunitiesList'
 import RealtorsPage from './components/RealtorsPage'
 import Navbar from './components/Navbar';
