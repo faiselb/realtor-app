@@ -15,18 +15,18 @@ mongoose.connect(process.env.MONGODB_URI)
 
 const connection = mongoose.connection
 connection.on('connected', () => {
-  console.log('Mongoose Connected Successfully')    
-}) 
+  console.log('Mongoose Connected Successfully')
+})
 
 connection.on('error', (err) => {
   console.log('Mongoose default connection error: ' + err)
-}) 
+})
 
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
 app.use(express.static(__dirname + '/client/build/'))
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
   res.sendFile(__dirname + '/client/build/index.html')
 })
 
@@ -46,18 +46,18 @@ app.use('/api/realtors/:realtorId/communities', CommunitiesController)
 const ListingsController = require('./controllers/listingsController')
 app.use('/api/realtors/:realtorId/communities/:communityId/listings', ListingsController)
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   const err = new Error('Not Found')
   err.status = 404
   next(err)
 })
 
-app.use(function(err, req, res, next) {
-  
+app.use(function (err, req, res, next) {
+
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
 
-  
+
   res.status(err.status || 500)
   res.render('error')
 })
