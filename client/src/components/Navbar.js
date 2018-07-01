@@ -4,37 +4,6 @@ import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
  render() {
-        return (
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
-          <Link className="nav-link" to="/realtors">
-           Home
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/realtors">
-            Our Realtors
-          </Link>
-        </li>
-        
-      </ul>
-    );
-
-    const guestLinks = (
-      <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
-          <Link className="nav-link" to="/realtors">
-            Communities
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/realtors">
-            Listings
-          </Link>
-        </li>
-      </ul>
-    );
-
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
@@ -54,7 +23,6 @@ class Navbar extends Component {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/realtors">
-                  {' '}
                   Listings
                 </Link>
               </li>

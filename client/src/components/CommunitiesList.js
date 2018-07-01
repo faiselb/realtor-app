@@ -238,7 +238,6 @@ const CommunityContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-image: url(Atlanta.jpg);
     background-size: contain;
     &:hover {
         border: 8px #05B8CC solid;
@@ -249,7 +248,6 @@ const CommunityContainer = styled.div`
 
 const CommunityNameColor = styled.div`
     color: #000000;
-    background: url('Atlanta.jpg') no-repeat;
     text-transform: uppercase;
     font-size: 20px;
     @media (max-width: 700px) {
