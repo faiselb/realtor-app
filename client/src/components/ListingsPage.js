@@ -31,6 +31,7 @@ class ListingsPage extends Component {
             const realtorId = this.props.match.params.realtorId
             const communityId = this.props.match.params.communityId
             const response = await axios.get(`/api/realtors/${realtorId}/communities/${communityId}/listings`)
+            console.log(response.data);
             this.setState({ community: response.data })
         }
         catch (err) {
@@ -56,7 +57,7 @@ class ListingsPage extends Component {
         const payload = {
             listingAddress: this.state.listing.listingAddress,
             bedrooms: this.state.listing.bedrooms,
-            bathrooms: this.state.bathrooms,
+            bathrooms: this.state.listing.bathrooms,
             listingPrice: this.state.listing.listingPrice,
             yearbuilt: this.state.listing.yearbuilt,
             listingphoto_url: this.state.listing.listingphoto_url,
@@ -101,11 +102,12 @@ class ListingsPage extends Component {
                 return <div key={index}>
                     <Listing>
                         < div className='bounding-secondbox'>
-                            <div><BoldSpan>Listing Address:</BoldSpan>{listing.listingAddress}</div>
-                            <div><BoldSpan>Listing Price:</BoldSpan>{listing.listingPrice}</div>
-                            <div><BoldSpan>Number of Bedrooms:</BoldSpan>{listing.bedrooms}</div>
-                            <div><BoldSpan>Year Built:</BoldSpan>{listing.yearbuilt}</div>
-                            <div><BoldSpan>Short Decription:</BoldSpan>{listing.listingdescription}</div>
+                            <div><BoldSpan>Listing Address: </BoldSpan>{listing.listingAddress}</div>
+                            <div><BoldSpan>Listing Price: </BoldSpan>{listing.listingPrice}</div>
+                            <div><BoldSpan>Number of Bedrooms: </BoldSpan>{listing.bedrooms}</div>
+                            <div><BoldSpan>Number of Bathrooms: </BoldSpan>{listing.bathrooms}</div>
+                            <div><BoldSpan>Year Built: </BoldSpan>{listing.yearbuilt}</div>
+                            <div><BoldSpan>Short Decription: </BoldSpan>{listing.listingdescription}</div>
                         </div>
 
                     </Listing>
