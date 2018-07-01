@@ -182,7 +182,7 @@ class CommunitiesList extends Component {
                     }
                 </div>
 
-                <div ClassName= 'section-community'>
+                <div className= 'section-community'>
                     {
                         realtor.communities.map((community, index) => {
                             return (<div className='CommunityContainer' key={index}>

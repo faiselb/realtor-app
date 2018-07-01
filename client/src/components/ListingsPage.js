@@ -98,8 +98,8 @@ class ListingsPage extends Component {
         let listingsList = []
         if (this.state.community && this.state.community.listings) {
             listingsList = this.state.community.listings.map((listing, index) => {
-                return <div>
-                    <Listing key={index}>
+                return <div key={index}>
+                    <Listing>
                         < div className='bounding-secondbox'>
                             <div><BoldSpan>Listing Address:</BoldSpan>{listing.listingAddress}</div>
                             <div><BoldSpan>Listing Price:</BoldSpan>{listing.listingPrice}</div>
@@ -120,7 +120,7 @@ class ListingsPage extends Component {
                 <h4>Communities Listings</h4>
 
                 <CommunityTitle><BoldSpan>Community: </BoldSpan>{this.state.community.communityName}</CommunityTitle>
-                <zipCode><BoldSpan>Zip Code: </BoldSpan>{this.state.community.zipCode}</zipCode>
+                <ZipCode><BoldSpan>Zip Code: </BoldSpan>{this.state.community.zipCode}</ZipCode>
                 <ListingList>
                     {listingsList}
 
@@ -197,7 +197,7 @@ const CommunityTitle = styled.h5`
     padding-left: 20px;
 `
 
-const zipCode = styled.div`
+const ZipCode = styled.div`
     font-size: 20px;
     padding-left: 20px;
 `
