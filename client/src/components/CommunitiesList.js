@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 import RealtorDetail from './RealtorDetail'
@@ -218,16 +218,6 @@ const ButtonHolder = styled.div`
     display: flex;
 `
 
-const CommunityListContainer = styled.div`
-    background-color:#f4f4f4;
-    border-radius: 5px;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 580px;
-    
-    `
-
 const Button = styled.button`
     border-radius: 5px;
     background-color: #05B8CC;
@@ -256,13 +246,6 @@ const CommunityContainer = styled.div`
     }
     
     `
-
-const newFormStyle = {
-        width: 300,
-    fontSize: 14,
-    color: '#ffffff',
-    padding: '20px',
-}
 
 const CommunityNameColor = styled.div`
     color: #000000;
@@ -303,11 +286,4 @@ const RealtorDetailContainer = styled.div`
 
     flex-direction: column;
 }
-`
-
-
-const RealtorDetailColumn = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 `

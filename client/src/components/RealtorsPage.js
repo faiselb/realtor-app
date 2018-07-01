@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
-import { Button } from 'react-materialize'
-import SubmitButton from './SubmitButton'
 import GoTrashcan from 'react-icons/lib/go/trashcan'
 import NewRealtor from './NewRealtor';
 import { PageBottom } from './Styles'
@@ -90,15 +88,6 @@ class RealtorsPage extends Component {
                 <CityState>{realtor.city}, {realtor.state}</CityState>
             </RealtorContainer>)
         })
-
-        const newFormStyle = {
-
-            width: 300,
-            fontSize: 14,
-            color: '#05B8CC',
-            padding: '20px',
-
-        }
 
         return (
 

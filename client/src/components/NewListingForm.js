@@ -1,5 +1,4 @@
 import React from 'react'
-import SubmitButton from './SubmitButton'
 import styled from 'styled-components'
 
 function NewListingForm(props) {

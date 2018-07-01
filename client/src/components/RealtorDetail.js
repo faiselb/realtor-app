@@ -37,6 +37,3 @@ const NameDiv = styled.div`
 const BoldDiv = styled.div`
     font-weight: bold;
 `
-const BoldSpan = styled.span`
-    font-weight: bold;
-`

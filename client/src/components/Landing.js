@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import '../App.css';
-import styled from 'styled-components'
+import '../App.css'
 
 class Landing extends Component {
     render() {
@@ -31,20 +30,3 @@ class Landing extends Component {
 }
 
 export default Landing;
-
-
-
-const BackgroundDiv = styled.div`
-    height: 800px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center; 
-`
-
-
-const SplashText = styled.div`
-    color: #FFFFFF;
-    &:hover {
-        color: #0000FF;
-    }
-`
