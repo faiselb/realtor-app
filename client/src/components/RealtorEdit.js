@@ -7,7 +7,6 @@ function RealtorEdit(props) {
         <div>
             <EditRealtorTitle>Edit Realtor Info</EditRealtorTitle>
             <form style={newFormStyle} onSubmit={props.updateRealtor}>
-                <div><Button>Submit Updates</Button></div>
                 <div>
                     <label htmlFor="name">Realtor Name</label>
                     <input onChange={props.handleRealtorChange} name="name" type="text" value={props.realtor.name} />
@@ -24,6 +23,7 @@ function RealtorEdit(props) {
                     <label htmlFor="state">State</label>
                     <input onChange={props.handleRealtorChange} name="state" type="text" value={props.realtor.state} />
                 </div>
+                <div><Button>Submit Updates</Button></div>
             </form>
         </div>
     )
@@ -43,7 +43,7 @@ const newFormStyle = {
 const Button = styled.button`
     border-radius: 5px;
     background-color: #05B8CC;
-    color: #bfd964;
+    color: #fff;
     border-radius: 5px;
     padding: 5px;
     margin: 8px;

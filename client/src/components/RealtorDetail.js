@@ -9,7 +9,6 @@ const RealtorDetail = (props) => {
             <RealtorDiv>
                 <NameDiv>{props.realtor.name}</NameDiv>
                 <div>{props.realtor.description}</div>
-                <br />
                 <BoldDiv>Address:</BoldDiv>
                 <div>{props.realtor.address}</div>
                 <div>{props.realtor.city}, {props.realtor.state}</div>
@@ -27,7 +26,7 @@ const RealtorDiv = styled.div`
     margin: 0;
     
     max-width: 350px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 `
 const NameDiv = styled.div`
     font-size: 22px;

@@ -99,8 +99,10 @@ class RealtorsPage extends Component {
                 <div>
                     <ToggleFormButton onClick={this.toggleAddRealtorForm}>
                         Sign Up
-                </ToggleFormButton>
+                    </ToggleFormButton>
 
+                </div>
+                <div>
                     {
                         this.state.addFormShowing ?
                             <div>
@@ -110,9 +112,7 @@ class RealtorsPage extends Component {
                             </div>
                             : null
                     }
-
                 </div>
-
                 <PageBottom></PageBottom>
             </RealtorList>
         )

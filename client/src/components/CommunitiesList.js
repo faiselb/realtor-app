@@ -127,12 +127,9 @@ class CommunitiesList extends Component {
 
             <h4> Realtor's Communities</h4>
                 <RealtorDetailContainer>
-                    
                     <RealtorDetail
                         realtor={this.state.realtor}
                     />
-
-                    
                 </RealtorDetailContainer>
                 <ButtonHolder>
                     <Button onClick={this.toggleEditForm}>
@@ -278,10 +275,8 @@ const RealtorShowCommunityList = styled.div`
 
 const RealtorDetailContainer = styled.div`
     display: flex;
-    padding: 20px;
     flex-direction: row;
     @media (max-width: 700px) {
-
     flex-direction: column;
 }
 `

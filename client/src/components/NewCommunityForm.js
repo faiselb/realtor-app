@@ -45,7 +45,7 @@ const newFormStyle = {
 const Button = styled.button`
     border-radius: 5px;
     background-color: #05B8CC;
-    color: #bfd964;
+    color: #fff;
     border-radius: 5px;
     padding: 5px;
     margin: 8px;
