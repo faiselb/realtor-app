@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import ListingsPage from './components/ListingsPage'
 import CommunitiesList from './components/CommunitiesList'
 import RealtorsPage from './components/RealtorsPage'
@@ -19,7 +19,12 @@ class App extends Component {
           <div className="page-flex">
             <div className="page-content">
               <Route exact path="/" component={Landing} />
-              <div className='App-header' />
+              <div className='App-header'>
+                <ul>
+                  <li><Link to={`/`}>Home</Link></li>
+                  <li><Link to={`/realtors`}>Our Realtors</Link></li>
+                </ul>
+              </div>
               <div className="container">
                 <Route exact path='/realtors' component={RealtorsPage} />
                 <Route exact path='/realtors/:realtorId/communities' component={CommunitiesList} />

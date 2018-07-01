@@ -19,13 +19,35 @@ body { height: 100%; }
 
 .App-header {
   background-color: #222;
-  height: 50px;
+  height: 60px;
   padding: 20px;
+  margin-bottom: 30px;
   color: white;
+}
+
+.App-header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.App-header li {
+  display: inline;
+  padding-left: 30px;
+  float: left;
+}
+
+.App-header a {
+  color: white;
+  font-size: 20px;
 }
 
 .App-title {
   font-size: 1.5em;
+}
+
+.footer {
+  background-color: #222;
 }
 
 .App-intro {
