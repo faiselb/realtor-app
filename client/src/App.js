@@ -11,18 +11,23 @@ import Landing from './components/Landing'
 class App extends Component {
 
   render() {
+    console.log(this.props);
     return (
 
       <Router>
         <div className="App">
-          <div className='App-header'></div>
-          <Route exact path="/" component={Landing} />
-          <div className="container">
-            <Route exact path='/realtors' component={RealtorsPage} />
-            <Route exact path='/realtors/:realtorId/communities' component={CommunitiesList} />
-            <Route exact path='/realtors/:realtorId/communities/:communityId/listings' component={ListingsPage} />
+          <div className="page-flex">
+            <div className="page-content">
+              <Route exact path="/" component={Landing} />
+              <div className='App-header' />
+              <div className="container">
+                <Route exact path='/realtors' component={RealtorsPage} />
+                <Route exact path='/realtors/:realtorId/communities' component={CommunitiesList} />
+                <Route exact path='/realtors/:realtorId/communities/:communityId/listings' component={ListingsPage} />
+              </div>
+            </div>
+            <Footer />
           </div>
-          <Footer />
         </div>
       </Router>
 

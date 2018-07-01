@@ -1,6 +1,16 @@
 .App {
   text-align: center;
+  height: 100%;
 }
+
+#root {
+  height: 100%;
+}
+
+
+html,
+body { height: 100%; }
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -22,6 +32,18 @@
   font-size: large;
 }
 
+
+.page-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+}
+
+.page-content {
+  flex: 1;
+}
+
 img {
   width: 100%;
 }
@@ -32,8 +54,6 @@ img {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  margin-top: -24px;
-  margin-bottom: -50px;
 }
 
 .landing-inner {
