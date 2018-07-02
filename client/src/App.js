@@ -22,7 +22,7 @@ class App extends Component {
               <div className='App-header'>
                 <ul>
                   <li><Link to={`/`}>Home</Link></li>
-                  <li><Link to={`/realtors`}>Our Realtors</Link></li>
+                  <li><Link to={`/realtors`}>Realtors</Link></li>
                 </ul>
               </div>
               <div className="container">

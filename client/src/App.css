@@ -47,7 +47,7 @@ body { height: 100%; }
 }
 
 .footer {
-  background-color: #222;
+  background-color:#222;
 }
 
 .App-intro {
@@ -75,7 +75,7 @@ img {
   background: url('Atlanta.jpg') no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .landing-inner {

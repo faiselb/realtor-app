@@ -92,7 +92,7 @@ class RealtorsPage extends Component {
         return (
 
             <RealtorList>
-                <h4>Our Realtors</h4>
+                <h4>Realtors</h4>
                 <div>
                     {realtorsList}
                 </div>
